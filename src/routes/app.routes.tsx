@@ -1,8 +1,10 @@
 import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
+import Home from '@screens/Home';
 import { MainTabNavigator } from './mainTabNavigator.routes';
 
 type AppRoutes = {
   MainTabNavigator: undefined;
+  Home: undefined;
 }
 
 export type AppNavigatorRoutesProps = NativeStackNavigationProp<AppRoutes>;
@@ -16,7 +18,8 @@ export function AppRoutes() {
         headerShown: false
       }}
     >
-      <Stack.Screen name="MainTabNavigator" component={MainTabNavigator} />
+      <Stack.Screen name="Home" component={Home} />
+      {/* <Stack.Screen name="MainTabNavigator" component={MainTabNavigator} /> */}
     </Stack.Navigator>
   )
 }

@@ -23,6 +23,7 @@ export const THEME = extendTheme(
     },
     fonts: {
       heading: 'Roboto_700Bold',
+      description: 'Roboto_500Medium',
       body: 'Roboto_400Regular',
     },
     fontSizes: {
