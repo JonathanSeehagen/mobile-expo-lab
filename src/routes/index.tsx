@@ -4,7 +4,7 @@ import { AppRoutes } from "./app.routes";
 
 export default function Routes() {
   return (
-    <SafeAreaProvider>
+    <SafeAreaProvider style={{ backgroundColor: 'transparent' }}>
       <NavigationContainer>
         <AppRoutes />
       </NavigationContainer>
