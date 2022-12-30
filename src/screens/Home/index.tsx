@@ -1,9 +1,16 @@
+
+import Constants from 'expo-constants';
 import TaskCard, { TaskCardProps } from "@components/TaskCard";
 import { Box, FlatList, HStack, Skeleton, Spinner, Text, VStack } from "native-base";
 import { useState } from "react";
 import { SafeAreaView } from 'react-native-safe-area-context';
+import useRenders from "src/hooks/useRenders";
 
 export default function Home() {
+  // const rendersCount = useRenders();
+
+  console.log(Constants.expoConfig?.extra.APP_VARIANT);
+
   const data: TaskCardProps[] = [
     {
       id: '1',
@@ -94,7 +101,9 @@ export default function Home() {
               fontWeight="medium"
               fontSize="lg"
             >
-              My Taks</Text>
+
+              My Tasks v0.7 {Constants.expoConfig?.extra.APP_VARIANT}
+            </Text>
           </HStack>
           <HStack mb={3} justifyContent='space-between'>
           </HStack>
